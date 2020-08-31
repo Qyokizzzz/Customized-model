@@ -1,0 +1,80 @@
+{
+    "config": {
+        "filename": "config.json"
+    },
+    "data": {
+        "filename": "..\\data\\pollution.csv",
+        "encoding": null,
+        "X_columns": [
+            "dew",
+            "temp",
+            "press",
+            "wnd_spd",
+            "snow",
+            "rain",
+            "pollution"
+        ],
+        "y_columns": [
+            "pollution"
+        ],
+        "is_same": false,
+        "time_steps": 60,
+        "pre_steps": 1,
+        "split": 0.8,
+        "feature_range": "(0, 1)",
+        "normalise": true,
+        "ascending": true
+    },
+    "training": {
+        "epochs": 10,
+        "batch_size": 60,
+        "verbose": 1,
+        "shuffle": true,
+        "load_config": true,
+        "stop_type": "customized",
+        "early_stopping": {
+            "is_enable": true,
+            "monitor": "val_loss",
+            "value": 0.002,
+            "verbose": 1,
+            "patience": 3,
+            "mode": "auto"
+        }
+    },
+    "model": {
+        "loss": "mse",
+        "optimizer": "adam",
+        "save_dir": "..\\saved_models",
+        "structure_dir": "..\\saved_pictures",
+        "save_structure": true,
+        "load_path": "..\\saved_models\\20200829-101246-ts60-id7-ps1-od1.h5",
+        "need_batch": false,
+        "layers": [
+            {
+                "type": "Conv1D",
+                "filters": 64,
+                "kernel_size": 1,
+                "activation": "'relu'"
+            },
+            {
+                "type": "AttentionOnDims"
+            },
+            {
+                "type": "Bidirectional",
+                "Inner": {
+                    "type": "LSTM",
+                    "units": 128,
+                    "return_sequences": false
+                }
+            },
+            {
+                "type": "Dropout",
+                "rate": 0.2
+            },
+            {
+                "type": "Dense",
+                "units": 1
+            }
+        ]
+    }
+}
