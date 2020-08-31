@@ -45,7 +45,7 @@
         "save_dir": "..\\saved_models",
         "structure_dir": "..\\saved_pictures",
         "save_structure": true,
-        "load_path": "..\\saved_models\\20200830-143155-ts1-id3-ps10-od3.h5",
+        "load_path": "..\\saved_models\\20200821-235708-ts1-id3-ps10-od3.h5",
         "need_batch": false,
         "layers": [
             {
@@ -87,8 +87,8 @@
         ],
         "labels": [
             "Close",
-            "Max",
-            "Min"
+            "High",
+            "Low"
         ],
         "colors": [
             "b",
@@ -102,7 +102,7 @@
             "goldenrod"
         ],
         "font": "C:\\Windows\\Fonts\\SimFang.ttf",
-        "is_saved": false,
+        "is_saved": true,
         "save_dir": "..\\saved_pictures"
     }
 }

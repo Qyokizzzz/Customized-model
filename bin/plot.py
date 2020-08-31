@@ -28,13 +28,17 @@ def main():
     model.load()
     train_pred = model.predict(x_train)
     test_pred = model.predict(x_test)
+
     train_pred = data.tile(train_pred)
     test_pred = data.tile(test_pred)
+
+    y_test = data.converter(y_test)
+    test_pred = data.converter(test_pred)
 
     font = font_manager.FontProperties(fname=configs["picture"]["font"])
     fig = plt.figure(figsize=(20, 10))
     ax = [0 for i in range(y_test.shape[1])]
-    title = ['close', 'max', 'min']
+
     for i in range(len(ax)):
         ax[i] = fig.add_subplot(2, 2, i + 1)
         ax[i].set_title(configs['picture']['labels'][i])
@@ -44,7 +48,7 @@ def main():
     ax[i].legend(loc="best", prop=font)
     plt.rcParams.update({'font.size': 40})
     if configs['picture']['is_saved']:
-        str_list = configs['model']['load_dir'].split('\\')
+        str_list = configs['model']['load_path'].split('\\')
         save_path = os.path.join(configs['picture']['save_dir'], str_list[-1].split('.')[0])
         plt.savefig(save_path)
     plt.show()
