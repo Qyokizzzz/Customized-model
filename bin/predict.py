@@ -6,7 +6,7 @@ from core.model_builder import CustomizableModel
 
 
 def main():
-    configs = json.load(open('..\\configs\\config2.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config3.json', encoding='utf-8'))
     data = DatasetMaker(configs)
     x_train, y_train = data.get_dataset(data.x_train, data.y_train)
     x_test, y_test = data.get_dataset(data.x_test, data.y_test, True)
@@ -25,7 +25,12 @@ def main():
     test_pred = model.predict(x_test)
     train_pred = data.tile(train_pred)
     test_pred = data.tile(test_pred)
-    model.show_score(y_train, y_test, train_pred, test_pred)
+    y_test = data.converter(y_test)
+    test_pred = data.converter(test_pred)
+    y_train = data.converter(y_train)
+    train_pred = data.converter(train_pred)
+    model.show_r2_score(y_train, y_test, train_pred, test_pred)
+    model.show_mse_score(y_train, y_test, train_pred, test_pred)
 
 
 if __name__ == "__main__":

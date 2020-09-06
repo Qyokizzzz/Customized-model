@@ -6,6 +6,7 @@ import os
 import datetime as dt
 from core.custom_early_stopping import EarlyStoppingByLossVal
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_squared_error
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import ModelCheckpoint
 
@@ -105,7 +106,7 @@ class Utils(object):
         return save_path
 
     @staticmethod
-    def show_score(y_train, y_test, train_predict, test_predict):
+    def show_r2_score(y_train, y_test, train_predict, test_predict):
         if y_train is None:
             print("The R2 score on the Test set is:{:0.3f}".format(r2_score(y_test, test_predict)))
         elif y_test is None:
@@ -113,3 +114,13 @@ class Utils(object):
         else:
             print("The R2 score on the Train set is:{:0.3f}".format(r2_score(y_train, train_predict)))
             print("The R2 score on the Test set is:{:0.3f}".format(r2_score(y_test, test_predict)))
+
+    @staticmethod
+    def show_mse_score(y_train, y_test, train_predict, test_predict):
+        if y_train is None:
+            print("The MSE score on the Test set is:{:0.3f}".format(mean_squared_error(y_test, test_predict)))
+        elif y_test is None:
+            print("The MSE score on the Train set is:{:0.3f}".format(mean_squared_error(y_train, train_predict)))
+        else:
+            print("The MSE score on the Train set is:{:0.3f}".format(mean_squared_error(y_train, train_predict)))
+            print("The MSE score on the Test set is:{:0.3f}".format(mean_squared_error(y_test, test_predict)))
