@@ -28,7 +28,7 @@ def r_predict(sequence, pre_steps, model):
 
 
 def main():
-    configs = json.load(open('..\\configs\\config.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config4.json', encoding='utf-8'))
     data = DatasetMaker(configs)
     model = CustomizableModel(configs)
     model.load()
@@ -36,7 +36,7 @@ def main():
     y_test = y_test.reshape(y_test.shape[0], y_test.shape[2])
     print(x_test.shape, y_test.shape)
 
-    pre_steps = 100
+    pre_steps = 10
     test_s = x_test[0: x_test.shape[0] - pre_steps]
     y_s = y_test[x_test.shape[0] - pre_steps: x_test.shape[0]]
     y_seq = r_predict(test_s, pre_steps, model.model)

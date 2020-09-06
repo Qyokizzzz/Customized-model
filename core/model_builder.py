@@ -8,7 +8,6 @@ from core.utils import Utils
 
 from core.custom_layer import AttentionOnDims
 from core.custom_layer import AttentionOnSteps
-from tensorflow.python.keras.engine.base_layer import Layer
 from tensorflow.keras import utils as ut
 from tensorflow.keras import backend as bd
 from tensorflow.keras.models import Model, load_model
@@ -24,8 +23,6 @@ from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import Activation
 from tensorflow.keras.layers import Permute
 from tensorflow.keras.layers import Multiply
-from tensorflow.keras.layers import Lambda
-from tensorflow.keras.optimizers import Adam
 
 
 class CustomizableModel(Utils):
@@ -53,7 +50,7 @@ class CustomizableModel(Utils):
             # print(command[i])
             tmp = eval(command[i])(tmp)
 
-        self.model = Model(inputs=[inputs], outputs=tmp)
+        self.model = Model(inputs=inputs, outputs=tmp)
         self.model.compile(loss=self.configs['model']['loss'], optimizer=self.configs['model']['optimizer'])
 
         print("model compiled")
