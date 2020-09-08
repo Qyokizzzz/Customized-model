@@ -44,7 +44,7 @@ class CustomizableModel(Utils):
             inputs = Input(shape=(self.configs['data']['time_steps'], len(self.configs['data']['X_columns'])))
 
         command = self.convert_list_to_cmd(self.configs['model']['layers'])
-        print(command)
+        # print(command)
         tmp = eval(command[0])(inputs)
         for i in range(1, len(command)):
             # print(command[i])

@@ -106,6 +106,13 @@ class Utils(object):
         return save_path
 
     @staticmethod
+    def adj_r2_score(y, y_pred):
+        #  貌似没什么用，结果没区别
+        n = len(y)
+        f = y.shape[-1]
+        return 1 - ((1 - r2_score(y, y_pred)) * (n - 1)) / (n - f - 1)
+
+    @staticmethod
     def show_r2_score(y_train, y_test, train_predict, test_predict):
         if y_train is None:
             print("The R2 score on the Test set is:{:0.3f}".format(r2_score(y_test, test_predict)))
