@@ -27,6 +27,14 @@ def r_predict(sequence, pre_steps, model):
     return sequence
 
 
+def predict_more(x, pre_steps, model):
+    temp = [x]
+    for i in range(pre_steps):
+        tmp = model.predict(temp[i].reshape(1, 1, 3))
+        temp.append(tmp)
+    return np.array(temp[1:])
+
+
 def main():
     configs = json.load(open('..\\configs\\config4.json', encoding='utf-8'))
     data = DatasetMaker(configs)
@@ -39,13 +47,14 @@ def main():
     print(y_test)
 
     pre_steps = 10
-    test_s = x_test[0: x_test.shape[0] - pre_steps]
+    test_s = x_test[x_test.shape[0] - pre_steps]
     y_s = y_test[x_test.shape[0] - pre_steps:]
-    y_seq = r_predict(test_s, pre_steps, model.model)
+    # y_seq = r_predict(test_s, pre_steps, model.model)
     y_true_pred = model.predict(x_test)
     y_true_pred = y_true_pred[y_true_pred.shape[0] - pre_steps:]
+    y_pred = predict_more(test_s, pre_steps, model)
 
-    y_pred = y_seq[x_test.shape[0] - pre_steps: x_test.shape[0]]
+    # y_pred = y_seq[x_test.shape[0] - pre_steps: x_test.shape[0]]
     y_pred = y_pred.reshape(y_pred.shape[0], y_pred.shape[2])
     y_s = data.converter(y_s)
     y_pred = data.converter(y_pred)
