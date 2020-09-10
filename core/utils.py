@@ -38,14 +38,8 @@ class Utils(object):
             if type(dic[i]) == dict:
                 self.read_dict_into_list(dic[i], lis)
             else:
-                if i == 'type':
-                    lis.append(dic[i])
-                    lis.append('(')
-                else:
-                    lis.append(i)
-                    lis.append('=')
-                    lis.append(dic[i])
-                    lis.append(',')
+                lis.append(dic[i] + '(') if i == 'type' else lis.append(i + '=' + str(dic[i]) + ',')
+
         temp = lis.pop()
         if temp != ',':
             lis.append(temp)

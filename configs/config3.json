@@ -17,7 +17,7 @@
         ],
         "is_same": true,
         "time_steps": 1,
-        "pre_steps": 100,
+        "pre_steps": 30,
         "split": 0.8,
         "feature_range": "(-1, 1)",
         "normalise": true,
@@ -44,8 +44,8 @@
         "optimizer": "adam",
         "save_dir": "..\\saved_models",
         "structure_dir": "..\\saved_pictures",
-        "save_structure": true,
-        "load_path": "..\\saved_models\\20200821-235708-ts1-id3-ps10-od3.h5",
+        "save_structure": false,
+        "load_path": "..\\saved_models\\20200911-000641-ts1-id3-ps30-od3.h5",
         "need_batch": false,
         "layers": [
             {
@@ -54,21 +54,13 @@
                 "return_sequences": false
             },
             {
-                "type": "Dropout",
-                "rate": 0.2
-            },
-            {
                 "type": "RepeatVector",
-                "n": 100
+                "n": 30
             },
             {
                 "type": "LSTM",
                 "units": 720,
                 "return_sequences": true
-            },
-            {
-                "type": "Dropout",
-                "rate": 0.2
             },
             {
                 "type": "TimeDistributed",

@@ -15,8 +15,6 @@ def main():
     if y_test.shape[1] == 1:
         y_test = y_test.reshape(y_test.shape[0], y_test.shape[2])
 
-    # x_test = x_test[0:960]
-    # y_test = y_test[0:960]
     model = CustomizableModel(configs)
     model.build()
     model.model.summary()

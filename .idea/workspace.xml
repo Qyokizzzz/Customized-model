@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eba9919-1016-44eb-bb53-80b7af27bad7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config3.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/model_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/model_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,29 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/customizable_model$train.coverage" NAME="train Coverage Results" MODIFIED="1599632371453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
-    <SUITE FILE_PATH="coverage/customizable_model$predict.coverage" NAME="predict Coverage Results" MODIFIED="1599447461574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
+    <SUITE FILE_PATH="coverage/customizable_model$train.coverage" NAME="train Coverage Results" MODIFIED="1599754125924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
+    <SUITE FILE_PATH="coverage/customizable_model$predict.coverage" NAME="predict Coverage Results" MODIFIED="1599754045501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
     <SUITE FILE_PATH="coverage/customizable_model$test.coverage" NAME="test Coverage Results" MODIFIED="1599581736783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding>
-                <element signature="e#22#87#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -41,8 +33,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/config3.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="171">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/model_builder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#22#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="40" column="100" selection-start-line="40" selection-start-column="100" selection-end-line="40" selection-end-column="100" />
+              <folding>
+                <element signature="e#22#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -66,14 +91,14 @@
         <option value="$PROJECT_DIR$/bin/plot.py" />
         <option value="$PROJECT_DIR$/configs/config.json" />
         <option value="$PROJECT_DIR$/configs/config4.json" />
-        <option value="$PROJECT_DIR$/core/utils.py" />
-        <option value="$PROJECT_DIR$/bin/predict.py" />
         <option value="$PROJECT_DIR$/Automatic-Course-Scheduling/test.py" />
         <option value="$PROJECT_DIR$/configs/config2.json" />
-        <option value="$PROJECT_DIR$/core/model_builder.py" />
         <option value="$PROJECT_DIR$/bin/test.py" />
-        <option value="$PROJECT_DIR$/configs/config3.json" />
+        <option value="$PROJECT_DIR$/core/model_builder.py" />
         <option value="$PROJECT_DIR$/bin/train.py" />
+        <option value="$PROJECT_DIR$/bin/predict.py" />
+        <option value="$PROJECT_DIR$/configs/config3.json" />
+        <option value="$PROJECT_DIR$/core/utils.py" />
       </list>
     </option>
   </component>
@@ -93,6 +118,11 @@
             <path>
               <item name="customizable-model" type="b2602c69:ProjectViewProjectNode" />
               <item name="customizable-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customizable-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customizable-model" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -198,8 +228,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.predict" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +251,7 @@
       <workItem from="1599555718488" duration="1825000" />
       <workItem from="1599568475252" duration="10383000" />
       <workItem from="1599629489983" duration="5222000" />
-      <workItem from="1599712857454" duration="668000" />
+      <workItem from="1599712857454" duration="12715000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599390741078</created>
@@ -248,18 +278,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79825000" />
+    <option name="totallyTimeSpent" value="91872000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1048" extended-state="6" />
+    <frame x="-4" y="-4" width="1928" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4121475" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46963122" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,16 +372,6 @@
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200906-210809-ts1-id3-ps1-od3.png" />
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200906-210644-ts1-id3-ps1-od3.png" />
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200906-211855-ts60-id3-ps1-od3.png" />
-    <entry file="file://$PROJECT_DIR$/core/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#22#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200907-115835-ts1-id3-ps10-od3.png" />
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200907-120022-ts1-id3-ps10-od3.png" />
     <entry file="file://$PROJECT_DIR$/configs/config.json">
@@ -386,33 +406,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../Automatic-Course-Scheduling/test.py" />
-    <entry file="file://$PROJECT_DIR$/core/model_builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1382">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="e#22#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="53" column="14" lean-forward="true" selection-start-line="6" selection-end-line="53" selection-end-column="14" />
-          <folding>
-            <element signature="e#22#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Anaconda/envs/py3.6/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -428,10 +421,52 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/saved_pictures/20200909-141610-ts1-id3-ps100-od3.png" />
-    <entry file="file://$PROJECT_DIR$/configs/config3.json">
+    <entry file="file://F:/Anaconda/envs/py3.6/Lib/site-packages/tensorflow/python/keras/layers/normalization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="-2508">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda/envs/py3.6/Lib/site-packages/tensorflow/python/keras/layers/normalization_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="207" column="52" selection-start-line="207" selection-start-column="52" selection-end-line="207" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda/envs/py3.6/Lib/site-packages/sklearn/preprocessing/_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14664">
+          <caret line="199" column="6" selection-start-line="199" selection-start-column="6" selection-end-line="199" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/data_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="e#22#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -445,17 +480,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/data_processor.py">
+    <entry file="file://$PROJECT_DIR$/bin/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2285">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="322">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/train.py">
+    <entry file="file://$PROJECT_DIR$/core/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="297">
+          <caret line="40" column="100" selection-start-line="40" selection-start-column="100" selection-end-line="40" selection-end-column="100" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/model_builder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#22#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/config3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>

@@ -23,6 +23,7 @@ from tensorflow.keras.layers import RepeatVector
 from tensorflow.keras.layers import Activation
 from tensorflow.keras.layers import Permute
 from tensorflow.keras.layers import Multiply
+from tensorflow.keras.layers import BatchNormalization
 
 
 class CustomizableModel(Utils):
