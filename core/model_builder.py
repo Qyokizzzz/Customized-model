@@ -61,7 +61,7 @@ class CustomizableModel(Utils):
     def load(self):
         self.model = load_model(
             self.configs['model']['load_path'],
-            custom_objects={'AttentionOnDims': AttentionOnDims, 'AttentionOnSteps': AttentionOnSteps}
+            # custom_objects={'AttentionOnDims': AttentionOnDims, 'AttentionOnSteps': AttentionOnSteps}
         )
 
     def __save_structure(self):

@@ -3,7 +3,7 @@
         "filename": "config4.json"
     },
     "data": {
-        "filename": "..\\data\\000001.csv",
+        "filename": "..\\data\\601398.csv",
         "encoding": "gb18030",
         "X_columns": [
             "收盘价",
@@ -17,8 +17,8 @@
         ],
         "is_same": true,
         "time_steps": 1,
-        "pre_steps": 1,
-        "split": 0.8,
+        "pre_steps": 25,
+        "split": 0.1,
         "feature_range": "(-1, 1)",
         "normalise": true,
         "ascending": false
@@ -45,7 +45,7 @@
         "save_dir": "..\\saved_models",
         "structure_dir": "..\\saved_pictures",
         "save_structure": false,
-        "load_path": "..\\saved_models\\20200906-232658-ts1-id3-ps1-od3.h5",
+        "load_path": "..\\saved_models\\25.h5",
         "need_batch": false,
         "layers": [
             {
