@@ -125,3 +125,27 @@ class Utils(object):
         else:
             print("The MSE score on the Train set is:{:0.3f}".format(mean_squared_error(y_train, train_predict)))
             print("The MSE score on the Test set is:{:0.3f}".format(mean_squared_error(y_test, test_predict)))
+
+    def show_euclidean_distance(self, y_train, y_test, train_predict, test_predict):
+        if y_train is None:
+            print("The Mean Euclidean Distance on the Test set is:{:0.3f}".format(
+                self.cal_mean_euclidean_distance(y_test, test_predict)))
+        elif y_test is None:
+            print("The Mean Euclidean Distance on the Train set is:{:0.3f}".format(
+                self.cal_mean_euclidean_distance(y_train, train_predict)))
+        else:
+            print("The Mean Euclidean Distance on the Train set is:{:0.3f}".format(
+                self.cal_mean_euclidean_distance(y_train, train_predict)))
+            print("The Mean Euclidean Distance on the Test set is:{:0.3f}".format(
+                self.cal_mean_euclidean_distance(y_test, test_predict)))
+
+    @staticmethod
+    def cal_mean_euclidean_distance(y1, y2):
+        total = 1
+        size = y1.shape
+        for i in size:
+            total = total * i
+        s = abs(y1 - y2)
+        for i in range(len(size)):
+            s = sum(s)
+        return s / total

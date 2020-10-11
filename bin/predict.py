@@ -39,6 +39,7 @@ def main():
 
     model.show_r2_score(y_train, y_test, train_pred, test_pred)
     model.show_mse_score(y_train, y_test, train_pred, test_pred)
+    model.show_euclidean_distance(y_train, y_test, train_pred, test_pred)
 
 
 if __name__ == "__main__":

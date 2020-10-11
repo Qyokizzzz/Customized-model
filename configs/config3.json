@@ -24,7 +24,7 @@
         "ascending": false
     },
     "training": {
-        "epochs": 10000,
+        "epochs": 4,
         "batch_size": 60,
         "verbose": 1,
         "shuffle": false,
