@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 class DataLoader(object):
     """A class for loading and transforming data for the long short-term memory model"""
 
-    def __init__(self, filename, encoding, split, x_cols, y_cols, is_same, feature_range, normalise, ascending):
+    def __init__(self, filename, encoding, split, x_cols, y_cols, is_same, feature_range, normalise, n_type, ascending):
         data_frame = pd.read_csv(filename, encoding=encoding)
         i_split = int(len(data_frame) * split)
         data_frame = data_frame.sort_index(ascending=ascending)
@@ -20,11 +20,10 @@ class DataLoader(object):
         self.is_same = is_same
         self.normalise = normalise
         if self.normalise:
-            self.scale_er = MinMaxScaler(feature_range=eval(feature_range))
-
-    # def standard(self, data):
-    #     scaler = StandardScaler()
-    #     scaler.fit_transform(data)
+            if n_type == 'MinMax':
+                self.scale_er = MinMaxScaler(feature_range=eval(feature_range))
+            elif n_type == 'Standard':
+                self.scale_er = StandardScaler()
 
     def normalizer(self, data, labels=None):
         """Merge data and labels on axis=1 and it was used for normalization in global space.
@@ -149,6 +148,7 @@ class DatasetMaker(DataLoader):
             self.configs['data']['is_same'],
             self.configs['data']['feature_range'],
             self.configs['data']['normalise'],
+            self.configs['data']['n_type'],
             self.configs['data']['ascending']
         )
 
