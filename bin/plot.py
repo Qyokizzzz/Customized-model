@@ -11,14 +11,21 @@ import os
 
 
 def main():
-    configs = json.load(open('..\\configs\\config4.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config20.json', encoding='utf-8'))
     data = DatasetMaker(configs)
-    x_train, y_train = data.get_dataset(data.x_train, data.y_train)
+    try:
+        x_train, y_train = data.get_dataset(data.x_train, data.y_train)
+
+        if y_train.shape[1] == 1:
+            y_train = y_train.reshape(y_train.shape[0], y_train.shape[2])
+        else:
+            y_train = data.tile(y_train)
+
+    except ValueError:
+        x_train = None
+
     x_test, y_test = data.get_dataset(data.x_test, data.y_test, True)
-    if y_train.shape[1] == 1:
-        y_train = y_train.reshape(y_train.shape[0], y_train.shape[2])
-    else:
-        y_train = data.tile(y_train)
+
     if y_test.shape[1] == 1:
         y_test = y_test.reshape(y_test.shape[0], y_test.shape[2])
     else:
@@ -26,10 +33,13 @@ def main():
 
     model = CustomizableModel(configs)
     model.load()
-    train_pred = model.predict(x_train)
-    test_pred = model.predict(x_test)
+    try:
+        train_pred = model.predict(x_train)
+        train_pred = data.tile(train_pred)
+    except ValueError:
+        pass
 
-    train_pred = data.tile(train_pred)
+    test_pred = model.predict(x_test)
     test_pred = data.tile(test_pred)
 
     y_test = data.converter(y_test)
@@ -52,6 +62,10 @@ def main():
         save_path = os.path.join(configs['picture']['save_dir'], str_list[-1].split('.')[0])
         plt.savefig(save_path)
     plt.show()
+
+    model.show_r2_score(None, y_test, None, test_pred)
+    model.show_mse_score(None, y_test, None, test_pred)
+    model.show_euclidean_distance(None, y_test, None, test_pred)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+pip install pydot or pydotplus or pydot-ng
+pip install graphviz
+下载并安装graphviz的安装包（.msi or .zip）
+将graphviz添加到path中，并重启计算机
+pydot/pydot-ng早已停止开发，不适用于3.5以上的python虚拟环境，所以我安装的是pydotplus
+因此要在keras的源码中将调用pydot的部分全部改成pydotplus
+版本高的keras（2.0.9+）可以自动识别pydot or pydotplus

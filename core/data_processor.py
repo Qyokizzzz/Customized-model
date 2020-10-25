@@ -3,6 +3,7 @@ __author__ = "Ldaze"
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 
 
 class DataLoader(object):
@@ -20,6 +21,10 @@ class DataLoader(object):
         self.normalise = normalise
         if self.normalise:
             self.scale_er = MinMaxScaler(feature_range=eval(feature_range))
+
+    # def standard(self, data):
+    #     scaler = StandardScaler()
+    #     scaler.fit_transform(data)
 
     def normalizer(self, data, labels=None):
         """Merge data and labels on axis=1 and it was used for normalization in global space.

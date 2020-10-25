@@ -6,7 +6,7 @@ from core.model_builder import CustomizableModel
 
 
 def main():
-    configs = json.load(open('..\\configs\\config4.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config30.json', encoding='utf-8'))
     data = DatasetMaker(configs)
 
     model = CustomizableModel(configs)
@@ -26,7 +26,7 @@ def main():
     else:
         y_train, train_pred = None, None
 
-    x_test, y_test = data.get_dataset(data.x_test, data.y_test)
+    x_test, y_test = data.get_dataset(data.x_test, data.y_test, True)
     if y_test.shape[1] == 1:
         y_test = y_test.reshape(y_test.shape[0], y_test.shape[2])
     else:

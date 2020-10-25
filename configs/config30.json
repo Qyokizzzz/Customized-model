@@ -1,0 +1,107 @@
+{
+    "config": {
+        "filename": "config30.json"
+    },
+    "data": {
+        "filename": "..\\data\\000063.csv",
+        "encoding": "gb18030",
+        "X_columns": [
+            "收盘价",
+            "最高价",
+            "最低价"
+        ],
+        "y_columns": [
+            "收盘价",
+            "最高价",
+            "最低价"
+        ],
+        "is_same": true,
+        "time_steps": 1,
+        "pre_steps": 30,
+        "split": 0.45,
+        "feature_range": "(-1, 1)",
+        "normalise": true,
+        "ascending": false
+    },
+    "training": {
+        "epochs": 1000,
+        "batch_size": 60,
+        "verbose": 1,
+        "shuffle": false,
+        "load_config": true,
+        "stop_type": "customized",
+        "early_stopping": {
+            "is_enable": true,
+            "monitor": "val_loss",
+            "value": 0.0179,
+            "verbose": 1,
+            "patience": 3,
+            "mode": "auto"
+        }
+    },
+    "model": {
+        "loss": "mse",
+        "optimizer": "adam",
+        "save_dir": "..\\saved_models",
+        "structure_dir": "..\\saved_pictures",
+        "save_structure": false,
+        "load_path": "..\\saved_models\\20201005-161527-ts1-id3-ps30-od3.h5",
+        "need_batch": false,
+        "layers": [
+            {
+                "type": "LSTM",
+                "units": 120
+            },
+            {
+                "type": "RepeatVector",
+                "n": 30
+            },
+            {
+                "type": "Dropout",
+                "rate": 0.2
+            },
+            {
+                "type": "LSTM",
+                "units": 360,
+                "return_sequences": true
+            },
+            {
+                "type": "Dropout",
+                "rate": 0.2
+            },
+            {
+                "type": "TimeDistributed",
+                "Inner": {
+                    "type": "Dense",
+                    "units": 3
+                }
+            }
+        ]
+    },
+    "picture": {
+        "columns": [
+            "收盘价",
+            "最高价",
+            "最低价"
+        ],
+        "labels": [
+            "Close",
+            "High",
+            "Low"
+        ],
+        "colors": [
+            "b",
+            "g",
+            "r",
+            "c",
+            "m",
+            "y",
+            "k",
+            "gold",
+            "goldenrod"
+        ],
+        "font": "C:\\Windows\\Fonts\\SimFang.ttf",
+        "is_saved": true,
+        "save_dir": "..\\saved_pictures"
+    }
+}

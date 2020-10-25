@@ -61,13 +61,13 @@ class CustomizableModel(Utils):
     def load(self):
         self.model = load_model(
             self.configs['model']['load_path'],
-            # custom_objects={'AttentionOnDims': AttentionOnDims, 'AttentionOnSteps': AttentionOnSteps}
+            custom_objects={'AttentionOnDims': AttentionOnDims, 'AttentionOnSteps': AttentionOnSteps}
         )
 
     def __save_structure(self):
         str_list = self.filename.split('\\')
         filename = str_list[-1].split('.')[0]
-        filename = filename+'.png'
+        filename = filename+'_structure.png'
         ut.plot_model(
             self.model,
             to_file=self.save_path(self.configs['model']['structure_dir'], filename),

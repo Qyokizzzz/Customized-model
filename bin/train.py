@@ -6,7 +6,7 @@ from core.model_builder import CustomizableModel
 
 
 def main():
-    configs = json.load(open('..\\configs\\config3.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config20.json', encoding='utf-8'))
     data = DatasetMaker(configs)
     x_train, y_train = data.get_dataset(data.x_train, data.y_train)
     x_test, y_test = data.get_dataset(data.x_test, data.y_test)

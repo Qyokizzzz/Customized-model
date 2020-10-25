@@ -148,4 +148,8 @@ class Utils(object):
         s = abs(y1 - y2)
         for i in range(len(size)):
             s = sum(s)
-        return s / total
+        return s/total
+
+    @staticmethod
+    def cal_mean(mean, n, x):
+        return (mean*n+x)/(n+1)
