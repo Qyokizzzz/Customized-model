@@ -11,7 +11,7 @@ import os
 
 
 def main():
-    configs = json.load(open('..\\configs\\config20.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config10.json', encoding='utf-8'))
     data = DatasetMaker(configs)
     try:
         x_train, y_train = data.get_dataset(data.x_train, data.y_train)

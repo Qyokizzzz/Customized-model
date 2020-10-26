@@ -3,7 +3,7 @@
         "filename": "config10.json"
     },
     "data": {
-        "filename": "..\\data\\399006.csv",
+        "filename": "..\\data\\601318.csv",
         "encoding": "gb18030",
         "X_columns": [
             "收盘价",
@@ -21,6 +21,7 @@
         "split": 0,
         "feature_range": "(-1, 1)",
         "normalise": true,
+        "n_type": "MinMax",
         "ascending": false
     },
     "training": {

@@ -18,14 +18,14 @@
         "is_same": true,
         "time_steps": 1,
         "pre_steps": 20,
-        "split": 0.5,
+        "split": 0,
         "feature_range": "(-1, 1)",
         "normalise": true,
         "n_type": "Standard",
         "ascending": false
     },
     "training": {
-        "epochs": 1000,
+        "epochs": 2000,
         "batch_size": 60,
         "verbose": 1,
         "shuffle": false,
@@ -46,7 +46,7 @@
         "save_dir": "..\\saved_models",
         "structure_dir": "..\\saved_pictures",
         "save_structure": false,
-        "load_path": "..\\saved_models\\20201005-145944-ts1-id3-ps20-od3.h5",
+        "load_path": "..\\saved_models\\20201026-134719-ts1-id3-ps20-od3.h5",
         "need_batch": false,
         "layers": [
             {

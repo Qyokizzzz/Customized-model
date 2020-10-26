@@ -6,7 +6,7 @@ from core.model_builder import CustomizableModel
 
 
 def main():
-    configs = json.load(open('..\\configs\\config30.json', encoding='utf-8'))
+    configs = json.load(open('..\\configs\\config20.json', encoding='utf-8'))
     data = DatasetMaker(configs)
 
     model = CustomizableModel(configs)
