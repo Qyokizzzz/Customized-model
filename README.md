@@ -1,2 +1,2 @@
 # customizable-model
-A deep learning model can be built quickly with configuration file
+An example of stock forecasting is used for the practice of deep learning, it can build a model quickly with configuration file
